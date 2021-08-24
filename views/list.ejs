@@ -1,0 +1,48 @@
+<%- include("header") -%>
+<!-- <div class="p-3 mb-2 bg-info text-dark">
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      cycle
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      swim  
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+    <label class="form-check-label" for="flexRadioDefault1">
+      running
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+    <label class="form-check-label" for="flexRadioDefault2">
+      skipping 
+    </label>
+  </div>
+</div> -->
+<body bgcolor="lightblue" style="text-align: center;">
+  <p style="text-align: center;">
+<% newlistitem.forEach(function(item) { %>
+<form action="/delete"  method ="post">
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" name="checkbox"  value="<%=item._id %>" onChange="this.form.submit()" name="flexRadioDefault" id="flexRadioDefault2" >
+  <label class="form-check-label" for="flexRadioDefault2">
+    <%= item.name%>
+  </label>
+</div>
+</form>
+<% }); %>
+  <form class="item" action="/" method="POST">
+<input type="text"  name="n" placeholder="new"><hr>
+<button id="b" style="text-align:center" type="submit" <span id="s2"></span>+</span></button>
+
+
+  </form>
+  </p>
+</body>
